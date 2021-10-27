@@ -1,0 +1,28 @@
+---
+layout: search
+title: Search
+permalink: /search/
+---
+
+<form action="{{ site.baseurl }}/search/index.html" method="get">
+  <label for="search-box">검색어: </label>
+  <input type="text" id="search-box" name="query">
+  <input type="submit" value="검색">
+</form>
+
+<ul id="search-results"></ul>
+
+<script>
+  window.store = {
+    {% for post in site.posts %}
+      "{{ post.url | slugify }}": {
+        "title": "{{ post.title | xml_escape }}",
+        "url": "{{ post.url | xml_escape }}"
+      }
+      {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  };
+</script>
+
+<script src="{{ site.baseurl }}/js/lunr.min.js" charset="utf-8"></script>
+<script src="{{ site.baseurl }}/js/search.js" charset="utf-8"></script>
