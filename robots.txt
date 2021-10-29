@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://SeyaWhy.github.io/sitemap.xml
+Sitemap: https://SeyaWhy.github.io/novel/sitemap.xml

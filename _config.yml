@@ -14,6 +14,10 @@ avatar: https://cdn.discordapp.com/icons/572088684107661342/a_6e83571c7a1a52347e
 navigation:
   - name: Home
     url: /
+  - name: Character
+    url: /character
+  - name: About
+    url: /about
   - name: Search
     url: /search
   # - name: Archive
